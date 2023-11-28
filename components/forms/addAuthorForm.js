@@ -17,7 +17,7 @@ const addAuthorForm = () => {
         <label for="title">Email</label>
         <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" required>
       </div>
-      <button type="submit" class="btn btn-primary mt-3">Submit Author</button>
+      <button type="submit" class="btn btn-primardy mt-3">Submit Author</button>
     </form>`;
 
   renderToDOM('#form-container', domString);
