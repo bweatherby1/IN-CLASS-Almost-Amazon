@@ -1,4 +1,3 @@
-import { getAuthorBooks } from '../api/authorData';
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
@@ -16,7 +15,6 @@ const viewAuthor = (obj) => {
        <i id="delete-author-btn--${obj.firebaseKey}" class="btn btn-danger fas fa-trash-alt">Delete</i>
      </div>
    </div>
-   <div>${getAuthorBooks}</div>
     </div>`;
 
   renderToDOM('#view', domString);

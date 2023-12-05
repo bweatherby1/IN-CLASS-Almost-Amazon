@@ -65,6 +65,7 @@ const updateAuthor = (payload) => new Promise((resolve, reject) => {
 });
 
 const getAuthorBooks = (firebaseKey) => new Promise((resolve, reject) => {
+  console.warn('NoBooks', firebaseKey);
   fetch(`${endpoint}/books.json?orderBy="author_id"&equalTo=${firebaseKey}`, {
     method: 'GET',
     headers: {
@@ -82,5 +83,5 @@ export {
   getSingleAuthor,
   deleteSingleAuthor,
   updateAuthor,
-  getAuthorBooks
+  getAuthorBooks,
 };
