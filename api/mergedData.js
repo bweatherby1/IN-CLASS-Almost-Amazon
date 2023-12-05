@@ -18,4 +18,11 @@ const deleteAuthorBooksRelationship = (firebaseKey) => new Promise((resolve, rej
   }).catch(reject);
 });
 
-export { getBookDetails, deleteAuthorBooksRelationship };
+const getAuthorDetails = (firebaseKey) => new Promise((resolve, reject) => {
+  getSingleAuthor(firebaseKey).then((bookObject) => {
+    getSingleBook(bookObject.author_id)
+      .then((authorObject) => resolve({ ...bookObject, authorObject }));
+  }).catch(reject);
+});
+
+export { getBookDetails, deleteAuthorBooksRelationship, getAuthorDetails };
